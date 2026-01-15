@@ -4,7 +4,7 @@ import shutil
 import subprocess
 import sys
 
-def run_easyeda2kicad_from_file(input_file, output_dir=".Hardware/lib/lcsc", python_exec="python"):
+def run_easyeda2kicad_from_file(input_file, output_dir="./lib/lcsc", python_exec="python"):
     input_file = os.path.expanduser(input_file)
     output_dir = os.path.expanduser(output_dir)
     python_exec = python_exec or "python"
@@ -51,7 +51,7 @@ def run_easyeda2kicad_from_file(input_file, output_dir=".Hardware/lib/lcsc", pyt
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Run easyeda2kicad for a list of LCSC IDs.")
     parser.add_argument("input_file", nargs="?", default="./hardware/lcsc.txt", help="Path to file with one LCSC ID per line")
-    parser.add_argument("output_dir", nargs="?", default=".Hardware/lib/lcsc", help="Output directory")
+    parser.add_argument("output_dir", nargs="?", default="./hardware/lib/lcsc", help="Output directory")
     parser.add_argument("--python", dest="python_exec", default="python",
                         help="Python executable to use (default: 'python')")
     args = parser.parse_args(argv)
