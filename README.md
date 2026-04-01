@@ -1,2 +1,2 @@
-# Miguel-s-Simple-Flight-Controller
+# Miguel-s-Flight-Controller
 
